@@ -1,5 +1,5 @@
 /*!
- * sadrix-vue-color v0.0.27
+ * sadrix-vue-color v1.0.0
  * (c) sadrix
  * Released under the MIT License.
  */
@@ -232,9 +232,7 @@ var SadrixVueColorMixin = (function (defaultColor, customColors) {
       vueColor: function vueColor(name) {
         var opacity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
         var hex = defaultColor;
-        colors = Object.assign({}, data, {
-          customColors: customColors
-        });
+        var colors = Object.assign(data, customColors);
         if (colors.hasOwnProperty(name)) hex = data[name];
         var r = parseInt(hex.substring(1, 3), 16);
         var g = parseInt(hex.substring(3, 5), 16);
@@ -253,8 +251,11 @@ var index = {
     var customColors = {};
 
     if (_typeof(options) == 'object') {
-      if (options.hasOwnProperty('defaultColor') && typeof options.defaultColor == 'string') defaultColor = options.defaultColor;
-      if (options.hasOwnProperty('customColors') && _typeof(options.customColors) == 'object') customColors = options.customColors;
+      if (options.hasOwnProperty('defaultColor')) if (typeof options.defaultColor == 'string') defaultColor = options.defaultColor;else console.warn('[sadrix-vue-color]', 'defaultColor option should be a [string] of your colors. You pass [' + _typeof(options.customColors) + ']');
+
+      if (options.hasOwnProperty('customColors')) {
+        if (_typeof(options.customColors) == 'object') customColors = options.customColors;else console.warn('[sadrix-vue-color]', 'customColors option should be an [object] of your colors. You pass [' + _typeof(options.customColors) + ']');
+      }
     }
 
     Vue.mixin(SadrixVueColorMixin(defaultColor, customColors));

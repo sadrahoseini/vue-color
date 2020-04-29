@@ -1,10 +1,12 @@
 # 🎨 Sadrix Vue Color
 This package created to make using colors easier inside vue application.
 
+## 🎉 version 1 released 🎈
+
 ## How to use
 1. Install package in your project with this command:
 
-npm i sadrix-vue-color
+npm i -S sadrix-vue-color
 
 2. Import package inside your Vuejs application config file and let Vue() instance use it as a plugin:
 
@@ -28,6 +30,23 @@ mounted() {
     console.log(this.vueColor('blue-800', 0.3));
 }
 ```
+
+# New in version 1.0.0
+Now you can change default color of `vueColor(colorName)` method and add you custom beautiful colors as an object to the plugin. So how to do this?
+Easily! You just need to pass them as option to your app config file.
+here : `Vue.use(plugin, options)`
+ ``` javascript
+import SadrixVueColor from 'sadrix-vue-color'
+
+Vue.use(SadrixVueColor, {
+    defaultColor: '#ff5252', // my favorite color!!!
+    customColors: {
+        myBlue: '#0000ff',
+        "custom-red": '#220100'
+    }
+});
+```
+just remember default color and customColors should be passed only in `hex (#rrggbb)` format.
 
 ## How to use material color pallets inside sass files
 

@@ -4,7 +4,7 @@ export default (defaultColor, customColors) => {
         methods: {
             vueColor(name, opacity = 1) {
                 let hex = defaultColor;
-                colors = {...data, customColors};
+                let colors = Object.assign(data, customColors);
                 if (colors.hasOwnProperty(name))
                     hex = data[name]
                 
