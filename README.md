@@ -6,7 +6,7 @@ This package created to make using colors easier inside vue application.
 ## How to use
 1. Install package in your project with this command:
 
-npm i -S sadrix-vue-color
+`npm i -S sadrix-vue-color`
 
 2. Import package inside your Vuejs application config file and let Vue() instance use it as a plugin:
 
