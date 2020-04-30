@@ -1,7 +1,7 @@
 {
 	"private": false,
 	"name": "sadrix-vue-color",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A color manager for your applications!",
 	"main": "./dist/index.js",
 	"scripts": {
@@ -20,6 +20,14 @@
 		"scss",
 		"material colors"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sadrix/vue-color.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sadrix/vue-color/issues"
+	},
+	"homepage": "https://github.com/sadrix/vue-color#readme",
 	"devDependencies": {
 		"bili": "^4.9.3",
 		"rollup-plugin-vue": "^6.0.0-alpha.5",

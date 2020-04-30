@@ -1,5 +1,9 @@
 # 🎨 Sadrix Vue Color
 This package created to make using colors easier inside vue application.
+ 
+> ### github [repository](https://github.com/sadrix/vue-color.git) 
+> Please let me know what you think about this package.
+> Don't forget to report bugs.
 
 ## 🎉 version 1 released 🎈
 
@@ -31,7 +35,7 @@ mounted() {
 }
 ```
 
-# New in version 1.0.0
+## ⭐️ New in version 1.0.0 ⭐️
 Now you can change default color of `vueColor(colorName)` method and add you custom beautiful colors as an object to the plugin. So how to do this?
 Easily! You just need to pass them as option to your app config file.
 here : `Vue.use(plugin, options)`
@@ -48,7 +52,7 @@ Vue.use(SadrixVueColor, {
 ```
 just remember default color and customColors should be passed only in `hex (#rrggbb)` format.
 
-## How to use material color pallets inside sass files
+## 🎨 How to use material color pallets inside sass files
 
 You can easily use all material color pallets inside your stylesheet files.
 Import All.scss file to add all color pallets or simply add onlu pallets that you need to use in your project:
