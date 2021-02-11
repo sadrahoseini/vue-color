@@ -1,7 +1,7 @@
 {
 	"private": false,
 	"name": "sadrix-vue-color",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A color manager for your applications!",
 	"main": "./dist/index.js",
 	"scripts": {
